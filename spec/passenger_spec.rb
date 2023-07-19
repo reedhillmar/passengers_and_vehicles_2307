@@ -27,7 +27,7 @@ describe Passenger do
     end
   end
 
-  decribe "#drive" do
+  describe "#drive" do
     it "can assign the driver" do
       charlie.driver
 
