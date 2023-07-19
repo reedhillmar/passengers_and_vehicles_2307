@@ -44,4 +44,22 @@ describe Park do
       expect(@rmnp.passengers).to eq ([@reed, @erin, @karissa])
     end
   end
+
+  describe "#revenue" do
+    it "can calculate revenue generated" do
+      @wrx.add_passenger(@reed)
+      @wrx.add_passenger(@erin)
+      @wrangler.add_passenger(@karissa)
+      @rmnp.add_vehicle(@wrx)
+      @rmnp.add_vehicle(@wrangler)
+
+      @civic.add_passenger(@charlie)
+      @civic.add_passenger(@jude)
+      @civic.add_passenger(@taylor)
+      @cnp.add_vehicle(@civic)
+
+      expect(@rmnp.revenue).to eq(30)
+      expect(@cnp.revenue).to eq(30)
+    end
+  end
 end
