@@ -13,4 +13,11 @@ describe Passenger do
       expect(@charlie.age).to eq(18)
     end
   end
+
+  describe "#adult?" do
+    it "can tell if a passenger is an adult" do
+      expect(@charlie.adult?).to be true
+      expect(@taylor.adult?).to be false
+    end
+  end
 end
