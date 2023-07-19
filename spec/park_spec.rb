@@ -32,4 +32,16 @@ describe Park do
       expect(@rmnp.vehicles).to eq([@civic, @wrx])
     end
   end
+
+  describe "#passengers" do
+    it "can list passengers that have entered the park" do
+      @wrx.add_passenger(@reed)
+      @wrx.add_passenger(@erin)
+      @wrangler.add_passenger(@karissa)
+      @rmnp.add_vehicle(@wrx)
+      @rmnp.add_vehicle(@wrangler)
+
+      expect(@rmnp.passengers).to eq ([@reed, @erin, @karissa])
+    end
+  end
 end
