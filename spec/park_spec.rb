@@ -75,7 +75,7 @@ describe Park do
   end
 
   describe "minors" do
-    it "can list all visitors that are minors" do
+    it "can list all visitors that are minors alphabetically" do
       @civic.add_passenger(@jude)
       @civic.add_passenger(@charlie)
       @civic.add_passenger(@taylor)
