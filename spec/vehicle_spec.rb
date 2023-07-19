@@ -36,4 +36,14 @@ describe Vehicle do
       expect(@vehicle.passengers).to eq([])
     end
   end
+
+  describe "#add_passenger" do
+    it "can add passengers" do
+      @vehicle.add_passenger(@charlie)
+      @vehicle.add_passenger(@jude)
+      @vehicle.add_passenger(@taylor) 
+
+      expect(@vehicle.passengers).to eq([@charlie, @jude, @taylor])
+    end
+  end
 end
