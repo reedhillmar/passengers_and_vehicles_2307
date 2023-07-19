@@ -7,4 +7,8 @@ class Vehicle
     @model = model
     @speeding = false
   end
+
+  def speeding?
+    @speeding
+  end
 end
