@@ -22,4 +22,12 @@ describe Vehicle do
       expect(@vehicle.speeding?).to be false
     end
   end
+
+  describe "#speed" do
+    it "can make a vehicle speed" do
+      @vehicle.speed
+
+      expect(@vehicle.speeding?).to be true
+    end
+  end
 end
