@@ -23,4 +23,13 @@ describe Park do
       expect(@rmnp.vehicles).to eq([])
     end
   end
+
+  describe "#add_vehicle" do
+    it "can track vehicles entering the park" do
+      @rmnp.add_vehicle(@civic)
+      @rmnp.add_vehicle(@wrx)
+
+      expect(@rmnp.vehicles).to eq([@civic, @wrx])
+    end
+  end
 end
