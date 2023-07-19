@@ -70,7 +70,7 @@ describe Park do
       @civic.add_passenger(@taylor)
       @cnp.add_vehicle(@civic)
 
-      expect(@rmnp.all_attendees).to eq (["Charlie", "Jude", "Taylor"])
+      expect(@cnp.all_attendees).to eq (["Charlie", "Jude", "Taylor"])
     end
   end
 end
