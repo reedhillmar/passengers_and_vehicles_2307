@@ -16,4 +16,10 @@ describe Vehicle do
       expect(@vehicle.model).to eq("Civic")
     end
   end
+
+  describe "#speeding?" do
+    it "can return if a vehicle is speeding" do
+      expect(@vehicle.speeding?).to be false
+    end
+  end
 end
