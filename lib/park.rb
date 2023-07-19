@@ -18,4 +18,16 @@ class Park
   def revenue
     @vehicles.sum {|vehicle| vehicle.num_adults * @admission_price}
   end
+
+  def all_attendees
+    passengers.map {|passenger| passenger.name}.sort
+  end
+
+  def minors
+    passengers.find_all {|passenger| !passenger.adult?}.map {|passenger| passenger.name}.sort
+  end
+
+  def adults
+    passengers.find_all {|passenger| passenger.adult?}.map {|passenger| passenger.name}.sort
+  end
 end
