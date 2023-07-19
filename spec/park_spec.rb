@@ -62,4 +62,15 @@ describe Park do
       expect(@cnp.revenue).to eq(30)
     end
   end
+
+  describe "#all_attendees" do
+    it "can list all visitors alphabetically" do
+      @civic.add_passenger(@jude)
+      @civic.add_passenger(@charlie)
+      @civic.add_passenger(@taylor)
+      @cnp.add_vehicle(@civic)
+
+      expect(@rmnp.all_attendees).to eq (["Charlie", "Jude", "Taylor"])
+    end
+  end
 end
