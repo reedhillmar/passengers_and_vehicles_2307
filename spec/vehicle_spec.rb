@@ -30,4 +30,10 @@ describe Vehicle do
       expect(@vehicle.speeding?).to be true
     end
   end
+
+  describe "#passengers" do
+    it "has no passengers by default" do
+      expect(@vehicle.passengers).to eq([])
+    end
+  end
 end
