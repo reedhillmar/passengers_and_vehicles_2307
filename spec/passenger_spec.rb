@@ -29,7 +29,7 @@ describe Passenger do
 
   describe "#drive" do
     it "can assign the driver" do
-      charlie.driver
+      @charlie.drive
 
       expect(@charlie.driver?).to be true
     end
