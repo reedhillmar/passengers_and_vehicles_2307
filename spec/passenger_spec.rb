@@ -21,11 +21,15 @@ describe Passenger do
     end
   end
 
-  describe "driver?" do
-    it "can return the driver" do
+  describe "#driver?" do
+    it "can return if a passenger is the driver" do
       expect(@charlie.driver?).to be false
-      
-      charlie.drive
+    end
+  end
+
+  decribe "#drive" do
+    it "can assign the driver" do
+      charlie.driver
 
       expect(@charlie.driver?).to be true
     end
