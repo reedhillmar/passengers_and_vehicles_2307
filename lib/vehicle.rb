@@ -22,10 +22,6 @@ class Vehicle
   end
 
   def num_adults
-    num_adults = 0
-    @passengers.map do |passenger|
-      num_adults += 1 if passenger.adult?
-    end
-    num_adults
+    @passengers.find_all {|passenger| passenger.adult?}.count
   end
 end
