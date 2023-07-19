@@ -74,7 +74,7 @@ describe Park do
     end
   end
 
-  describe "minors" do
+  describe "#minors" do
     it "can list all visitors that are minors alphabetically" do
       @civic.add_passenger(@jude)
       @civic.add_passenger(@charlie)
@@ -85,14 +85,14 @@ describe Park do
     end
   end
 
-  describe "adults" do
+  describe "#adults" do
     it "can list all visitors that are adults alphabetically" do
       @civic.add_passenger(@jude)
       @civic.add_passenger(@charlie)
       @civic.add_passenger(@taylor)
       @cnp.add_vehicle(@civic)
 
-      expect(@cnp.all_attendees).to eq (["Charlie", "Jude"])
+      expect(@cnp.adults).to eq (["Charlie", "Jude"])
     end
   end
 end
