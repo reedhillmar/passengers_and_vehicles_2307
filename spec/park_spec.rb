@@ -84,4 +84,15 @@ describe Park do
       expect(@cnp.minors).to eq (["Taylor"])
     end
   end
+
+  describe "adults" do
+    it "can list all visitors that are adults alphabetically" do
+      @civic.add_passenger(@jude)
+      @civic.add_passenger(@charlie)
+      @civic.add_passenger(@taylor)
+      @cnp.add_vehicle(@civic)
+
+      expect(@cnp.all_attendees).to eq (["Charlie", "Jude"])
+    end
+  end
 end
