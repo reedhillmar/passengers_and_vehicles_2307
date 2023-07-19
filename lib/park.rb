@@ -14,4 +14,8 @@ class Park
   def passengers
     @vehicles.map {|vehicle| vehicle.passengers}.flatten
   end
+
+  def revenue
+    @vehicles.sum {|vehicle| vehicle.num_adults * @admission_price}
+  end
 end
